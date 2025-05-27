@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitch Analysis</title>
+    <link rel="icon" href="https://static.twitchcdn.net/assets/favicon-32-e29e246c157142c94346.png" type="image/png">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding-bottom: 100px;
+        }
+
+        ul {
+            list-style-type: square;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        li {
+            background-color: #1e1e1e;
+            border-left: 5px solid #9146FF;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #bb86fc;
+        }
+
+        p {
+            font-size: 1em;
+            color: #ccc;
+        }
+
+        /* Footer em linha */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #3f005c;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            padding: 15px 20px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo img {
+            height: 32px;
+        }
+
+        .footer-nomes {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-nomes h1 {
+            font-size: 1em;
+            color: #bbb;
+        }
+
+        @media (max-width: 500px) {
+            footer {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .footer-nomes {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <h1>Facilidade</h1>
+            <p>Fácil acesso ao público pela possibilidade de entrar na plataforma sem a necessidade de criação de conta, com uma usuabilidade intuituitiva e interface agradável, com um mecanismo de log in com um passo direto.</p>
+        </li>
+        <li>
+            <h1>Gatilhos</h1>
+            <p>A Twitch tem notificações quando o streamer que se está seguindo inicia uma live, valendo-se de uma construção que direciona os produtos aos usuários conforme seu perfil pessoal</p>
+        </li>
+        <li>
+            <h1>Prova Social</h1>
+            <p>Incentivo para inserção em grupo social através de contato com avaliação de usuários
+                próximos na dinâmica em live, dentro de uma proposta de autenticidade, tudo sustentado pela criação deu um senso de comunidade comum</p>
+        </li>
+        <li>
+            <h1>Escassez/Urgência</h1>
+            <p>Justamente pela natureza de entretenimento em tempo real, a Twitch gera uma emergência maior para os
+                conteúdos veiculados.</p>
+        </li>
+        <li>
+            <h1>Reciprocidade</h1>
+            <p>Os streamers que movimentam a plataforma por meio de sua influência digital oferecem bonificações para os
+                telespectadores mais assíduos (créditos de usuário), além de pacotes VIP disponíveis para pagadores de um streamer em
+                específico.</p>
+        </li>
+    </ul>
+
+    <footer>
+        <div class="footer-logo">
+            <a href="https://www.twitch.tv" target="_blank" rel="noopener noreferrer">
+                <img src="https://static.twitchcdn.net/assets/favicon-32-e29e246c157142c94346.png" alt="Twitch Logo">
+            </a>
+        </div>
+        <div class="footer-nomes">
+            <h1>Junio</h1>
+            <h1>Haniel</h1>
+            <h1>Ezequiel</h1>
+        </div>
+    </footer>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+
+</html>
